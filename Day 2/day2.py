@@ -26,6 +26,7 @@ def part_2(passwords):
 
 
 input_file = open("input.txt", 'r')
+# regex used here splits strings by '-', ' ' and ': '
 passwords = [re.split('-| |: ', i) for i in input_file.read().splitlines()]
 print("PART 1: ", part_1(passwords))
 print("PART 2: ", part_2(passwords))
