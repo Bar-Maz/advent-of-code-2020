@@ -1,11 +1,22 @@
-def part_1(input_file):
+from functools import reduce
+
+
+def count_trees(input_file, slopes):
     line_length = len(input_file.readline().strip('\n'))
-    index = 0
-    tree_count = 0
-    for line in input_file.read().splitlines():
-        index += 3
-        tree_count += line[index % line_length] == '#'
-    return(tree_count)
+    indexes = [0]*len(slopes)
+    values = [0]*len(slopes)
+    for line_idx, line in enumerate(input_file.read().splitlines()):
+        for idx, (r, d) in enumerate(slopes):
+            if line_idx % d == 0:
+                new_index = (indexes[idx] + r) % line_length
+                indexes[idx] = new_index
+                values[idx] += line[new_index] == '#'
+                print([indexes, values])
+    return(reduce(lambda x, y: x*y, values))
+
+
+def part_1(input_file):
+    return count_trees(input_file, [(3, 1)])
 
 
 input_file = open("input.txt", 'r')
