@@ -25,8 +25,20 @@ def part_2(passwords):
     return pass_count
 
 
+def part_2_v2(passwords):
+    pass_count = 0
+    for p in passwords:
+        # we make a new word containing two letters at given positions (1st index = 1, hence we subtract 1 from index)
+        # p3 - password - p0 and p1 - indexes
+        # i one condition is true and another one isn't, the password is correct
+        if (p[3][int(p[0])-1] == p[2]) != (p[3][int(p[1])-1] == p[2]):
+            pass_count += 1
+    return pass_count
+
+
 input_file = open("input.txt", 'r')
 # regex used here splits strings by '-', ' ' and ': '
 passwords = [re.split('-| |: ', i) for i in input_file.read().splitlines()]
 print("PART 1: ", part_1(passwords))
 print("PART 2: ", part_2(passwords))
+print("PART 2 v2: ", part_2_v2(passwords))
