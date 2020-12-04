@@ -1,5 +1,5 @@
 # advent-of-code-2020
-Repository for my solutions to Advent of Code 2020 tasks. I realize that that some of approaches used here might not be optimal, but I'm not still in the process of learning python.
+Repository for my solutions to Advent of Code 2020 tasks. I realize that that some of approaches used here might not be optimal, but I'm still in the process of learning python.
 
 # Progress:
 | Day                                            | Stars |
