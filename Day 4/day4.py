@@ -21,10 +21,15 @@ def parse_passports(lines):
     return entries
 
 
+def get_correct_entries(entries):
+    return [x for x in entries if set(x.keys()).issuperset({"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"})]
+
+
 def part_1(lines):
     entries = parse_passports(lines)
     # we check if set of keys in our dict contains all of the required fields and then we sum all the outputs together
-    return sum([set(x.keys()).issuperset({"byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"}) for x in entries])
+    correct_entries = get_correct_entries(entries)
+    return len(correct_entries)
 
 
 input_file = open("input.txt", 'r')
