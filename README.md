@@ -7,4 +7,4 @@ Repository for my solutions to Advent of Code 2020 tasks. I realize that that so
 | [Day 1](https://adventofcode.com/2020/day/1)   | ⭐⭐ |
 | [Day 2](https://adventofcode.com/2020/day/2)   | ⭐⭐ |
 | [Day 3](https://adventofcode.com/2020/day/3)   | ⭐⭐ |
-| [Day 4](https://adventofcode.com/2020/day/4)   | ⭐ |
+| [Day 4](https://adventofcode.com/2020/day/4)   | ⭐⭐ |
