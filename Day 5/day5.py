@@ -7,7 +7,7 @@ def convert_to_binary(seat):
 
 
 def get_pairs(list):
-    # tee returns as many iterators based on a iterable as needed
+    # tee returns two iterators based on a iterable
     a, b = tee(list)
     # skip the first element of the second iterator
     next(b)
