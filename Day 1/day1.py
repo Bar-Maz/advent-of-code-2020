@@ -31,10 +31,11 @@ def part_2(numbers):
             while numbers[current_inner_index] < extra_remainder:
                 current_inner_index += 1
             # if the first number that isn't smaller than remainder is equal to remainder, we found the answer
-            if numbers[current_index] + numbers[current_inner_index] == remainder:
-                ci_val = numbers[current_index]
-                cii_val = numbers[current_inner_index]
-                return([n, ci_val, cii_val, n*ci_val*cii_val])
+            if current_inner_index not in [current_index, starting_index]:
+                if numbers[current_index] + numbers[current_inner_index] == remainder:
+                    ci_val = numbers[current_index]
+                    cii_val = numbers[current_inner_index]
+                    return([n, ci_val, cii_val, n*ci_val*cii_val])
             current_index += 1
 
 
