@@ -36,9 +36,9 @@ def part_2_v2(passwords):
     return pass_count
 
 
-input_file = open("input.txt", 'r')
+with open("input.txt", 'r') as input_file:
 # regex used here splits strings by '-', ' ' and ': '
-passwords = [re.split('-| |: ', i) for i in input_file.read().splitlines()]
-print("PART 1: ", part_1(passwords))
-print("PART 2: ", part_2(passwords))
-print("PART 2 v2: ", part_2_v2(passwords))
+    passwords = [re.split('-| |: ', i) for i in input_file.read().splitlines()]
+    print("PART 1: ", part_1(passwords))
+    print("PART 2: ", part_2(passwords))
+    print("PART 2 v2: ", part_2_v2(passwords))

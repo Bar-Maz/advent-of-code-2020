@@ -30,7 +30,7 @@ def part_2(input_file):
     return count_trees(input_file, [(1, 1), (3, 1), (5, 1), (7, 1), (1, 2)])
 
 
-input_file = open("input.txt", 'r')
-print("PART 1: ", part_1(input_file))
-input_file = open("input.txt", 'r')
-print("PART 2: ", part_2(input_file))
+with open("input.txt", 'r') as input_file:
+    print("PART 1: ", part_1(input_file))
+with open("input.txt", 'r') as input_file:
+    print("PART 2: ", part_2(input_file))

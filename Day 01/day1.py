@@ -39,7 +39,7 @@ def part_2(numbers):
             current_index += 1
 
 
-input_file = open("input.txt", 'r')
-numbers = sorted([int(i) for i in input_file.readlines()])
-print("PART 1: ", part_1(numbers))
-print("PART 2: ", part_2(numbers))
+with open("input.txt", 'r') as input_file:
+    numbers = sorted([int(i) for i in input_file.readlines()])
+    print("PART 1: ", part_1(numbers))
+    print("PART 2: ", part_2(numbers))

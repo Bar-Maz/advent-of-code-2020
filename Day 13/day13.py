@@ -59,8 +59,8 @@ def part_2(lines_str):
             timestamp += increment
 
 
-input_file = open("input.txt", 'r')
-timestamp = int(input_file.readline())
-lines_str = input_file.readline()
-print("PART 1: ", part_1(timestamp, lines_str))
-print("PART 2: ", part_2(lines_str))
+with open("input.txt", 'r') as input_file:
+    timestamp = int(input_file.readline())
+    lines_str = input_file.readline()
+    print("PART 1: ", part_1(timestamp, lines_str))
+    print("PART 2: ", part_2(lines_str))

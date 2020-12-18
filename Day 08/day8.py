@@ -1,5 +1,6 @@
 from copy import deepcopy
 
+
 def parse_instruction(str):
     # each instruction looks like: ins +4
     tokens = str.split(' ')
@@ -56,11 +57,12 @@ def part_2(lines):
     for jn in jmp_nop:
         # need to deep copy, because objects were getting modified in both arrays
         new_instructions = deepcopy(instructions)
-        #swap one jmp or nop instruction
-        new_instructions[jn["idx"]]["op"] = "nop" if jn["ins"]["op"] == "jmp" else "nop"
+        # swap one jmp or nop instruction
+        new_instructions[jn["idx"]
+                         ]["op"] = "nop" if jn["ins"]["op"] == "jmp" else "nop"
         index = 0
         acc = 0
-        # check max index 
+        # check max index
         max_index = len(new_instructions) - 1
         while True:
             if(index > max_index):
@@ -86,7 +88,7 @@ def part_2(lines):
             index += 1
 
 
-input_file = open("input.txt", 'r')
-lines = input_file.read().splitlines()
-print("PART 1: ", part_1(lines))
-print("PART 2: ", part_2(lines))
+with open("input.txt", 'r') as input_file:
+    lines = input_file.read().splitlines()
+    print("PART 1: ", part_1(lines))
+    print("PART 2: ", part_2(lines))

@@ -55,8 +55,8 @@ def part_2(lines):
     return sequences_count
 
 
-input_file = open("input.txt", 'r')
-lines = input_file.read().splitlines()
-numbers = sorted([int(x) for x in lines])
-print("PART 1: ", part_1(numbers))
-print("PART 2: ", part_2(numbers))
+with open("input.txt", 'r') as input_file:
+    lines = input_file.read().splitlines()
+    numbers = sorted([int(x) for x in lines])
+    print("PART 1: ", part_1(numbers))
+    print("PART 2: ", part_2(numbers))

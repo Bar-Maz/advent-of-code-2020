@@ -83,9 +83,7 @@ def part_2(lines):
     return sum([check_entry(e) for e in correct_entries])
 
 
-input_file = open("input.txt", 'r')
-lines = input_file.readlines()
-print("PART 1: ", part_1(lines))
-input_file = open("input.txt", 'r')
-lines = input_file.readlines()
-print("PART 2: ", part_2(lines))
+with open("input.txt", 'r') as input_file:
+    lines = input_file.readlines()
+    print("PART 1: ", part_1(lines))
+    print("PART 2: ", part_2(lines))
